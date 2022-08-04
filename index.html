@@ -1,49 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>scrumptious homepage
-    </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scrumptious homepage</title>
 <link rel="stylesheet" href="index.css">
 
-<style>
-    div.a {
-    width: 1600px;
-    border: 15px solid rgb(64, 64, 64);
-    border-color: rgb(128,128,128);
-    padding: 50px;
-    align-items: center;
-    margin: 20px;
-  }
-</style>
+<!--style-->
+    <style>
+        body {
+        font-family: "Apple Chancery", cursive;
+        }
+
+        .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(203, 215, 255);
+        overflow-x: hidden;
+        transition: 0.8s;
+        padding-top: 120px;
+        }
+
+        .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #331C66;
+        display: block;
+        transition: 0.2s;
+        }
+
+        .sidenav a:hover {
+        color: rgb(255, 255, 255);
+        }
+
+        .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        left: 240px;
+        font-size: 60px;
+        
+        }
+
+        .boob {
+            
+        border-style: double;
+        border-color: black;
+        border-width: 8px;
+
+        }
+
+        #main {
+        transition: margin-left .5s;
+        padding: 16px;
+        }
+
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+    </style>
 </head>
 
+<!--body code-->
 
 <body>
-    <h2 style="text-align:center;">navigation </h2><br>
 
-    <a href="emo.html"> talk to me please im lonely</a><br>
-    <a href="bears.html"> brown bears !!!</a> <br>
-    <a href="fanfiction.html">fanfics!</a> <br>
-    <a href="canada.html">canada theory</a><br><br>
-    
-
-<h2 style="text-align: center;"> main page</h2><br>
-
-
-    <div class="a">
-     <h1 style="text-align: center; font-size: 80px;">helhho, wlecome to my hellhole </h1> <br>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="emo.html">about me >:)</a>
+  <a href="bears.html">brown bears</a>
+  <a href="canada.html">canada theory</a>
+  <a href="fanfiction.html">fanfiction!!!</a>
 </div>
 
-<p style="text-align: center; font-size: 16px;">
-i created this goofy little silly place to keep me sane and to test out my html code. :D 
+<!--open button-->
+<span style="color: #331C66;font-size:40px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<!--open button end-->
 
-</p><br><br><br><br><br>
-<p style="font-size: 8px;">launched on 7/29/2022 around 7:00pm tee hee</p>
+<!--MAIN. (i like women btw)-->
+<div id="main"> 
+  <br>
+  <br>
+  <br>
+  <br>
+    <div class="boob">
+        <h2 style="text-align:center;">HEHLEHLLO WHELCOME TO MY WAEBSITE</h2>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+<p style="text-align: center; font-size: 22px;">
+this is just a tiny little funny little place for me to test my code :D<br>
+started somewhere around 7:00pm on 7/29/2022
+
+</p>
+  
+  
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "320px";
+  document.getElementById("main").style.marginLeft = "320px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
    
-
-
 </body>
-</html>
+</html> 
