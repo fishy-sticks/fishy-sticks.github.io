@@ -2,17 +2,16 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--if your reading this i want to let you know that i think scarlett johansson is attractive ty for listening-->
 <link rel="icon" type="image/jpg" href="images/dog.jpg">
 <title>scrumptious homepage</title>
 <link rel="stylesheet" href="index.css">
 
 <!--style-->
     <style>
-        body {
-        font-family: "Apple Chancery", cursive;
-        }
+        
 
-        .sidenav {
+        .sn {
         height: 100%;
         width: 0;
         position: fixed;
@@ -25,7 +24,7 @@
         padding-top: 120px;
         }
 
-        .sidenav a {
+        .sn a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 25px;
@@ -34,25 +33,19 @@
         transition: 0.2s;
         }
 
-        .sidenav a:hover {
+        .sn a:hover {
         color: rgb(255, 255, 255);
         }
 
-        .sidenav .closebtn {
+        .sn .closebtn {
         position: absolute;
-        bottom: 960px;
+        top:0;
         left: 240px;
         font-size: 60px;
         
         }
 
-        .boob {
-            
-        border-style: double;
-        border-color: black;
-        border-width: 8px;
 
-        }
 
         #main {
         transition: margin-left .5s;
@@ -60,8 +53,8 @@
         }
 
         @media screen and (max-height: 450px) {
-        .sidenav {padding-top: 15px;}
-        .sidenav a {font-size: 18px;}
+        .sn {padding-top: 15px;}
+        .sn a {font-size: 18px;}
         }
     </style>
 </head>
@@ -70,7 +63,7 @@
 
 <body>
 
-<div id="mySidenav" class="sidenav">
+<div id="sidenavblock" class="sn">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="emo.html">about me >:)</a>
   <a href="bears.html">brown bears</a>
@@ -79,8 +72,9 @@
 </div>
 
 <!--open button-->
-
-<span style="color: #331C66;font-size:40px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<span style="color:#331C66; font-size:40px; cursor:pointer" onclick="openNav()">
+   &#9776; 
+</span>
 <!--open button end-->
 
 <!--MAIN. (i like women btw)-->
@@ -89,21 +83,16 @@
   <br>
   <br>
   <br>
-    <div class="boob">
-        <h2 style="text-align:center;">HEHLEHLLO WHELCOME TO MY WAEBSITE</h2>
+    <div>
+        <h1 style="text-align:center;">HEHLEHLLO WHELCOME TO MY WAEBSITE</h1>
     </div>
-<br>
-<br>
 <br>
 <br>
 <br>
 <br> 
 <p style="text-align: center; font-size: 22px;">
 this is just a tiny little funny little place for me to test my code :D<br>
-started somewhere around 7:00pm on 7/29/2022 <br>
-<br>
-<br>
-also at the time of writing (8/4/2022) the site is completely broken for mobile so tee hee?
+started somewhere around 7:00pm on 7/29/2022
 
 </p>
   
@@ -112,12 +101,12 @@ also at the time of writing (8/4/2022) the site is completely broken for mobile 
 
 <script>
 function openNav() {
-  document.getElementById("mySidenav").style.width = "320px";
+  document.getElementById("sidenavblock").style.width = "320px";
   document.getElementById("main").style.marginLeft = "320px";
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("sidenavblock").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
 }
 </script>
