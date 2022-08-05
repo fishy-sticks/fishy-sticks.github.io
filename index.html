@@ -9,8 +9,7 @@
 
 <!--style-->
     <style>
-        
-
+    
         .sn {
         height: 100%;
         width: 0;
@@ -42,11 +41,8 @@
         top:0;
         left: 240px;
         font-size: 60px;
-        
         }
-
-
-
+        
         #main {
         transition: margin-left .5s;
         padding: 16px;
@@ -56,7 +52,48 @@
         .sn {padding-top: 15px;}
         .sn a {font-size: 18px;}
         }
+    
+        * {
+        margin: 0;
+        padding: 0;
+    }
+
+ /*message board*/
+    textarea {
+        margin-left: 25%;
+        width: 800px;
+        resize: none;
+        height: 100px;
+        border: 3px rgb(0, 0, 0) solid;
+        outline: none;
+        
+    }
+
+    li {
+        margin-left: 25%; 
+        width: 800px;
+        background-color: rgb(230, 230, 230);
+        font-size: 20px;
+        
+   
+    }
+
+    li a {
+        float: right;
+    }
+
+    #mommy{
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+    }
+    
+    
+    
+    
     </style>
+    
 </head>
 
 <!--body code-->
@@ -89,6 +126,11 @@
 <br>
 <br>
 <br>
+
+<div id="mommy"><img src="https://c.tenor.com/pCaXUuto_UEAAAAC/cat-spin-spin.gif" alt="spinning cat in chair" /></div>
+
+
+<br>
 <br> 
 <p style="text-align: center; font-size: 22px;">
 this is just a tiny little funny little place for me to test my code :D<br>
@@ -110,6 +152,57 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 </script>
-   
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2 style="text-align:center;">very sillly mmeassage boxe</h2>
+<!--message box-->
+<br>
+<br>
+<br>
+<textarea></textarea><br>
+    <button style="margin-left:50%;" >  post!!  </button>
+    <br>
+    <br>
+    <ul></ul>
+    <script>
+        
+        var text = document.querySelector("textarea");
+        var btn = document.querySelector("button");
+        var ul = document.querySelector("ul");
+        
+        btn.onclick = function () {
+            if (text.value == "") //if its blank 
+            {alert("TYPE SOMETHING IN ")}
+                 else {
+               
+                var listed = document.createElement("li");
+                
+                listed.innerHTML = text.value + "<a href='javascript:;'> delete </a>"
+                text.value = "";//removes text
+                //adds message :D
+                ul.insertBefore(listed, ul.children[0]);
+                //deletes listed element
+                var as = document.querySelectorAll("a");
+                //loops
+                for (var i = 0; i < as.length; i++)
+                 {
+                    as[i].onclick = function () {
+                        //deletes node
+                        ul.removeChild(this.parentNode);
+                    }
+                }
+            }
+        }
+    </script>
+
+
+
+
 </body>
 </html> 
